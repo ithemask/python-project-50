@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Configuration file comparison utility"
+authors = ["ithemask <ai77xxxx@gmail.com>"]
+repository = "git@github.com:ithemask/python-project-50.git"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: Freely Distributable",
+    "Operating System :: POSIX :: Linux",
+]
+packages = [{include = "gendiff"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
