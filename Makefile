@@ -3,13 +3,13 @@ install:
 
 build:
 	poetry build
-	
+
 publish:
 	poetry publish --dry-run
-	
+
 package-install:
 	python3 -m pip install --user dist/*.whl
-	
+
 package-reinstall:
 	python3 -m pip install --force-reinstall --user dist/*.whl
 
@@ -22,11 +22,5 @@ test:
 
 test-coverage:
 	poetry run pytest --cov-report term-missing --cov=gendiff
-
-gendiff:
-	poetry run gendiff
-
-gendiff-help:
-	poetry run gendiff -h
 
 .PHONY: gendiff
