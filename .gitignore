@@ -1,4 +1,4 @@
-#ignore pycache files
 __pycache__/
-#ignore project build files
 dist/
+.coverage
+coverage.xml
