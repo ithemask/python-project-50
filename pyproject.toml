@@ -3,7 +3,7 @@ name = "hexlet-code"
 version = "0.1.0"
 description = "Configuration file comparison utility"
 authors = ["ithemask <ai77xxxx@gmail.com>"]
-repository = "git@github.com:ithemask/python-project-50.git"
+repository = "https://github.com/ithemask/python-project-50"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3.10",
@@ -19,6 +19,7 @@ python = "^3.10"
 flake8 = "^6.1.0"
 pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
+pyyaml = "^6.0.1"
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
