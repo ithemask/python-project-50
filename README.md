@@ -1,5 +1,9 @@
 # "Difference Generator"
+[![Maintainability](https://api.codeclimate.com/v1/badges/2d017081cd6bac950f2b/maintainability)](https://codeclimate.com/github/ithemask/python-project-50/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2d017081cd6bac950f2b/test_coverage)](https://codeclimate.com/github/ithemask/python-project-50/test_coverage)
 [![Actions Status](https://github.com/ithemask/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ithemask/python-project-50/actions)
+[![pytest-check](https://github.com/ithemask/python-project-50/actions/workflows/pytest-check.yml/badge.svg)](https://github.com/ithemask/python-project-50/actions/workflows/pytest-check.yml)
+[![flake8-check](https://github.com/ithemask/python-project-50/actions/workflows/flake8-check.yml/badge.svg)](https://github.com/ithemask/python-project-50/actions/workflows/flake8-check.yml)
 ## Requirements
   + OS Linux
   + Python >= 3.10
