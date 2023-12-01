@@ -21,6 +21,6 @@ test:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov-report term-missing --cov=gendiff
+	poetry run pytest --cov-report term-missing --cov-report xml:coverage.xml --cov=gendiff
 
 .PHONY: gendiff
