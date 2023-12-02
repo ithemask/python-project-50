@@ -17,3 +17,7 @@ python3 -m pip install --user dist/*.whl
 ## Usage examples
 ### Plain JSON file comparison:
 [![asciicast](https://asciinema.org/a/RJMy1sttThLzbpqIIYm11jq4A.svg)](https://asciinema.org/a/RJMy1sttThLzbpqIIYm11jq4A)
+### Plain YAML file comparison:
+[![asciicast](https://asciinema.org/a/8TvJCZVztfL3hdUw7bFal6p1H.svg)](https://asciinema.org/a/8TvJCZVztfL3hdUw7bFal6p1H)
+### Plain JSON & YAML file comparison:
+[![asciicast](https://asciinema.org/a/PrjVDPeSEQahfOZOjeUYSU4wD.svg)](https://asciinema.org/a/PrjVDPeSEQahfOZOjeUYSU4wD)
