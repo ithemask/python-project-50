@@ -21,3 +21,9 @@ python3 -m pip install --user dist/*.whl
 [![asciicast](https://asciinema.org/a/8TvJCZVztfL3hdUw7bFal6p1H.svg)](https://asciinema.org/a/8TvJCZVztfL3hdUw7bFal6p1H)
 ### Plain JSON & YAML file comparison:
 [![asciicast](https://asciinema.org/a/PrjVDPeSEQahfOZOjeUYSU4wD.svg)](https://asciinema.org/a/PrjVDPeSEQahfOZOjeUYSU4wD)
+### Nested JSON file comparison:
+[![asciicast](https://asciinema.org/a/igXQ43tNsq6oz3utHmDTyzm8T.svg)](https://asciinema.org/a/igXQ43tNsq6oz3utHmDTyzm8T)
+### Nested YAML file comparison:
+[![asciicast](https://asciinema.org/a/SVDQkboxu0mGoD11uKkUrKTXU.svg)](https://asciinema.org/a/SVDQkboxu0mGoD11uKkUrKTXU)
+### Nested JSON & YAML file comparison:
+[![asciicast](https://asciinema.org/a/DcZag8pmerJj2zCuiPrN2z7K6.svg)](https://asciinema.org/a/DcZag8pmerJj2zCuiPrN2z7K6)
