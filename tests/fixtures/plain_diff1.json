@@ -1,0 +1,7 @@
+[
+  {"key": "follow", "old value": false, "new value": "nonexistent"},
+  {"key": "host", "old value": "hexlet.io", "new value": "hexlet.io"},
+  {"key": "proxy", "old value": "123.234.53.22", "new value": "nonexistent"},
+  {"key": "timeout", "old value": 50, "new value": 20},
+  {"key": "verbose", "old value": "nonexistent", "new value": true}
+]
