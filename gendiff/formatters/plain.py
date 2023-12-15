@@ -1,2 +1,2 @@
-def plain(diff):
+def plained(diff):
     pass

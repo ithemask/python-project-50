@@ -1,6 +1,6 @@
 import pytest
 from tests.fixture_parser import parse_txt, parse_json
-from gendiff.formatters.stylish import stylish
+from gendiff.formatters.stylish import stylished
 
 
 DIFF_PLAIN_PATH1 = "tests/fixtures/plain_diff1.json"
@@ -30,4 +30,4 @@ nested_expected2 = parse_txt(OUTPUT_NESTED_PATH2)
         (nested_diff2, nested_expected2),
     ])
 def test_stylished(test_input, expected):
-    assert stylish(test_input) == expected
+    assert stylished(test_input) == expected
