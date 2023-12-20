@@ -5,7 +5,9 @@
 [![pytest-check](https://github.com/ithemask/python-project-50/actions/workflows/pytest-check.yml/badge.svg)](https://github.com/ithemask/python-project-50/actions/workflows/pytest-check.yml)
 [![flake8-check](https://github.com/ithemask/python-project-50/actions/workflows/flake8-check.yml/badge.svg)](https://github.com/ithemask/python-project-50/actions/workflows/flake8-check.yml)
 ## Description
-___gendiff___ _is a simple command-line tool that generates the difference between two configuration files_
+___gendiff___ _is a simple command-line tool that generates the difference between two configuration files._  
+_Also ___gendiff package___ provides the ___generate_diff___ function that you may use in your projects._  
+_For more information see the "Usage examples" section below._
 ## Supported file types
   + _.json_
   + _.yaml_
@@ -104,20 +106,22 @@ git clone git@github.com:ithemask/python-project-50.git
 python3 -m pip install --user dist/*.whl
 ```
 ## Usage examples
-### Displaying the help message
+#### Displaying the help message
 [![asciicast](https://asciinema.org/a/mkyVFtUV17ZiKu6tZ89dlGmaH.svg)](https://asciinema.org/a/mkyVFtUV17ZiKu6tZ89dlGmaH)
-### Plain JSON file comparison:
+#### Plain JSON file comparison:
 [![asciicast](https://asciinema.org/a/m5PC9PVIPFEJOZINPGhzh0wii.svg)](https://asciinema.org/a/m5PC9PVIPFEJOZINPGhzh0wii)
-### Plain YAML file comparison:
+#### Plain YAML file comparison:
 [![asciicast](https://asciinema.org/a/7Sug1XmQItCo3qOXCQOTSdsYN.svg)](https://asciinema.org/a/7Sug1XmQItCo3qOXCQOTSdsYN)
-### Plain JSON & YAML file comparison:
+#### Plain JSON & YAML file comparison:
 [![asciicast](https://asciinema.org/a/w9If6nHbTRB9WKPRMXTH1FlYj.svg)](https://asciinema.org/a/w9If6nHbTRB9WKPRMXTH1FlYj)
-### Nested JSON file comparison:
+#### Nested JSON file comparison:
 [![asciicast](https://asciinema.org/a/JwxSbBbWqqloIiSjAY2Z40gK0.svg)](https://asciinema.org/a/JwxSbBbWqqloIiSjAY2Z40gK0)
-### Nested YAML file comparison:
+#### Nested YAML file comparison:
 [![asciicast](https://asciinema.org/a/BacX7RIOvdtbwAlxSqfyMQH9I.svg)](https://asciinema.org/a/BacX7RIOvdtbwAlxSqfyMQH9I)
-### Nested JSON & YAML file comparison:
+#### Nested JSON & YAML file comparison:
 [![asciicast](https://asciinema.org/a/lswyzmZLO04RRFVDOTzlK6nzo.svg)](https://asciinema.org/a/lswyzmZLO04RRFVDOTzlK6nzo)
-### Choosing the alternative output format
+#### Choosing the alternative output format
 [![asciicast](https://asciinema.org/a/lqKv4iz8PbtDhS4sZBaxIPJmD.svg)](https://asciinema.org/a/lqKv4iz8PbtDhS4sZBaxIPJmD)
 [![asciicast](https://asciinema.org/a/CPbVCZHuWra8zD6JcvWhj7OYy.svg)](https://asciinema.org/a/CPbVCZHuWra8zD6JcvWhj7OYy)
+#### Importing the ___generate_diff___ function
+[![asciicast](https://asciinema.org/a/Ga7AfPayXNEVMOXHaVtSIEWES.svg)](https://asciinema.org/a/Ga7AfPayXNEVMOXHaVtSIEWES)
