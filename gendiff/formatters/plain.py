@@ -1,14 +1,13 @@
-from gendiff.diff import DEFAULT_VALUE
 from gendiff.formatters.value_formatter import format_more
 
 
-def get_plain_view(path, old_value, new_value):
+def get_plain_view(path, action, old_value, new_value):
     beginning = f"Property '{path}' was "
-    if new_value == DEFAULT_VALUE:
-        return beginning + "removed"
-    if old_value == DEFAULT_VALUE:
+    if action == 'ADDED':
         return beginning + f"added with value: {format_more(new_value)}"
-    else:
+    if action == 'REMOVED':
+        return beginning + "removed"
+    if action == 'CHANGED':
         return (
             beginning
             + "updated. "
@@ -25,12 +24,14 @@ def plained(diff):
             if nested:
                 walk(nested, path + [key], output)
             else:
+                action = entry["action"]
                 old_value = entry["old value"]
                 new_value = entry["new value"]
-                if old_value == new_value:
+                if action == 'UNCHANGED':
                     continue
                 output.append(get_plain_view(
                     ".".join(path + [key]),
+                    action,
                     old_value,
                     new_value,
                 ))
