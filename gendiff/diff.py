@@ -1,4 +1,4 @@
-DEFAULT_VALUE = "nonexistent"
+DEFAULT_VALUE = 'nonexistent'
 
 
 def get_action(old_value, new_value):
@@ -20,13 +20,13 @@ def get_diff(dict1, dict2):
         new_value = dict2.get(key, DEFAULT_VALUE)
 
         if isinstance(old_value, dict) and isinstance(new_value, dict):
-            diff.append({"key": key, "nested": get_diff(old_value, new_value)})
+            diff.append({'key': key, 'nested': get_diff(old_value, new_value)})
         else:
             diff.append({
-                "key": key,
-                "action": get_action(old_value, new_value),
-                "old value": old_value,
-                "new value": new_value,
+                'key': key,
+                'action': get_action(old_value, new_value),
+                'old value': old_value,
+                'new value': new_value,
             })
 
     return diff

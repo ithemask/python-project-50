@@ -1,7 +1,7 @@
 from gendiff.formatters.value_formatter import format_
 
 
-INDENT_CHARS = "    "
+INDENT_CHARS = '    '
 OFFSET = -2
 
 
@@ -9,7 +9,7 @@ def get_stylish_view(key, value, special_char, depth, indent):
 
     def walk(dict_, output, depth, indent):
         for key, value in dict_.items():
-            beginning = f"{INDENT_CHARS * depth + key}: "
+            beginning = f'{INDENT_CHARS * depth + key}: '
             if isinstance(value, dict):
                 output.append(
                     beginning
@@ -18,8 +18,8 @@ def get_stylish_view(key, value, special_char, depth, indent):
             else:
                 output.append(beginning + format_(value))
         return (
-            "{\n" + "\n".join(output)
-            + f"\n{indent + INDENT_CHARS[0:OFFSET]}" + "}"
+            '{\n' + '\n'.join(output)
+            + f'\n{indent + INDENT_CHARS[0:OFFSET]}' + '}'
         )
 
     if isinstance(value, dict):
@@ -27,21 +27,21 @@ def get_stylish_view(key, value, special_char, depth, indent):
     else:
         formatted = format_(value)
 
-    return f"{indent + special_char + key}: {formatted}"
+    return f'{indent + special_char + key}: {formatted}'
 
 
 def form_string(key, action, old_value, new_value, depth, indent):
     if action == 'ADDED':
-        return get_stylish_view(key, new_value, "+ ", depth, indent)
+        return get_stylish_view(key, new_value, '+ ', depth, indent)
     if action == 'REMOVED':
-        return get_stylish_view(key, old_value, "- ", depth, indent)
+        return get_stylish_view(key, old_value, '- ', depth, indent)
     if action == 'CHANGED':
-        return "\n".join((
-            get_stylish_view(key, old_value, "- ", depth, indent),
-            get_stylish_view(key, new_value, "+ ", depth, indent),
+        return '\n'.join((
+            get_stylish_view(key, old_value, '- ', depth, indent),
+            get_stylish_view(key, new_value, '+ ', depth, indent),
         ))
     if action == 'UNCHANGED':
-        return get_stylish_view(key, old_value, "  ", depth, indent)
+        return get_stylish_view(key, old_value, '  ', depth, indent)
 
 
 def get_stylished(diff):
@@ -49,17 +49,17 @@ def get_stylished(diff):
     def walk(diff, output, depth):
         indent = (INDENT_CHARS * depth)[0:OFFSET]
         for entry in diff:
-            key = entry["key"]
-            nested = entry.get("nested")
-            special_char = "  "
+            key = entry['key']
+            nested = entry.get('nested')
+            special_char = '  '
             if nested:
-                output.append(indent + special_char + key + ": {")
+                output.append(indent + special_char + key + ': {')
                 walk(nested, output, depth + 1)
-                output.append(indent + INDENT_CHARS[0:OFFSET] + "}")
+                output.append(indent + INDENT_CHARS[0:OFFSET] + '}')
             else:
-                action = entry["action"]
-                old_value = entry["old value"]
-                new_value = entry["new value"]
+                action = entry['action']
+                old_value = entry['old value']
+                new_value = entry['new value']
                 output.append(form_string(
                     key,
                     action,
@@ -70,4 +70,4 @@ def get_stylished(diff):
                 ))
         return output
 
-    return "{\n" + "\n".join(walk(diff, [], 1)) + "\n}"
+    return '{\n' + '\n'.join(walk(diff, [], 1)) + '\n}'
