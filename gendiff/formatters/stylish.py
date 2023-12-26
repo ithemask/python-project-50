@@ -44,7 +44,7 @@ def form_string(key, action, old_value, new_value, depth, indent):
         return get_stylish_view(key, old_value, "  ", depth, indent)
 
 
-def stylished(diff):
+def get_stylished(diff):
 
     def walk(diff, output, depth):
         indent = (INDENT_CHARS * depth)[0:OFFSET]
