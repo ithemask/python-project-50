@@ -4,31 +4,37 @@
     "nested": [
       {
         "key": "follow",
+        "action": "REMOVED",
         "old value": false,
         "new value": "nonexistent"
       },
       {
         "key": "setting1",
+        "action": "UNCHANGED",
         "old value": "Value 1",
         "new value": "Value 1"
       },
       {
         "key": "setting2",
+        "action": "ADDED",
         "old value": "nonexistent",
         "new value": 200
       },
       {
         "key": "setting3",
+        "action": "CHANGED",
         "old value": null,
         "new value": true
       },
       {
         "key": "setting4",
+        "action": "REMOVED",
         "old value": "blah blah",
         "new value": "nonexistent"
       },
       {
         "key": "setting5",
+        "action": "REMOVED",
         "old value": {
           "key5": "value5"
         },
@@ -42,6 +48,7 @@
             "nested": [
               {
                 "key": "wow",
+                "action": "CHANGED",
                 "old value": "so much",
                 "new value": ""
               }
@@ -49,11 +56,13 @@
           },
           {
             "key": "key",
+            "action": "UNCHANGED",
             "old value": "value",
             "new value": "value"
           },
           {
             "key": "ops",
+            "action": "REMOVED",
             "old value": "vops",
             "new value": "nonexistent"
           }
@@ -66,16 +75,19 @@
     "nested": [
       {
         "key": "baz",
+        "action": "CHANGED",
         "old value": "bars",
         "new value": "bas"
       },
       {
         "key": "foo",
+        "action": "UNCHANGED",
         "old value": "bar",
         "new value": "bar"
       },
       {
         "key": "nest",
+        "action": "CHANGED",
         "old value": "str",
         "new value": {
           "key": "value"
@@ -85,6 +97,7 @@
   },
   {
     "key": "group2",
+    "action": "ADDED",
     "old value": "nonexistent",
     "new value": {
       "abc": 12345,
@@ -95,6 +108,7 @@
   },
   {
     "key": "group3",
+    "action": "REMOVED",
     "old value": {
       "deep": {
         "id": {
