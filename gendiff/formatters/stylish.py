@@ -1,4 +1,3 @@
-from gendiff.diff import DEFAULT_VALUE
 from gendiff.formatters.value_formatter import format_
 
 
@@ -27,21 +26,22 @@ def get_stylish_view(key, value, special_char, depth, indent):
         formatted = walk(value, [], depth + 1, indent)
     else:
         formatted = format_(value)
+
     return f"{indent + special_char + key}: {formatted}"
 
 
-def form_string(key, old_value, new_value, depth, indent):
-    if old_value == new_value:
-        return get_stylish_view(key, old_value, "  ", depth, indent)
-    if DEFAULT_VALUE not in (old_value, new_value):
+def form_string(key, action, old_value, new_value, depth, indent):
+    if action == 'ADDED':
+        return get_stylish_view(key, new_value, "+ ", depth, indent)
+    if action == 'REMOVED':
+        return get_stylish_view(key, old_value, "- ", depth, indent)
+    if action == 'CHANGED':
         return "\n".join((
             get_stylish_view(key, old_value, "- ", depth, indent),
             get_stylish_view(key, new_value, "+ ", depth, indent),
         ))
-    if DEFAULT_VALUE == new_value:
-        return get_stylish_view(key, old_value, "- ", depth, indent)
-    if DEFAULT_VALUE == old_value:
-        return get_stylish_view(key, new_value, "+ ", depth, indent)
+    if action == 'UNCHANGED':
+        return get_stylish_view(key, old_value, "  ", depth, indent)
 
 
 def stylished(diff):
@@ -57,11 +57,17 @@ def stylished(diff):
                 walk(nested, output, depth + 1)
                 output.append(indent + INDENT_CHARS[0:OFFSET] + "}")
             else:
+                action = entry["action"]
                 old_value = entry["old value"]
                 new_value = entry["new value"]
-                output.append(
-                    form_string(key, old_value, new_value, depth, indent)
-                )
+                output.append(form_string(
+                    key,
+                    action,
+                    old_value,
+                    new_value,
+                    depth,
+                    indent,
+                ))
         return output
 
     return "{\n" + "\n".join(walk(diff, [], 1)) + "\n}"
