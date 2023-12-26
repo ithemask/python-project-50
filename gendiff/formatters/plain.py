@@ -10,9 +10,9 @@ def get_plain_view(path, old_value, new_value):
         return beginning + f"added with value: {format_more(new_value)}"
     else:
         return (
-            beginning +
-            "updated. " +
-            f"From {format_more(old_value)} to {format_more(new_value)}"
+            beginning
+            + "updated. "
+            + f"From {format_more(old_value)} to {format_more(new_value)}"
         )
 
 

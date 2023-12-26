@@ -13,14 +13,14 @@ def get_stylish_view(key, value, special_char, depth, indent):
             beginning = f"{INDENT_CHARS * depth + key}: "
             if isinstance(value, dict):
                 output.append(
-                    beginning +
-                    walk(value, [], depth + 1, indent + INDENT_CHARS)
+                    beginning
+                    + walk(value, [], depth + 1, indent + INDENT_CHARS)
                 )
             else:
                 output.append(beginning + format_(value))
         return (
-            "{\n" + "\n".join(output) +
-            f"\n{indent + INDENT_CHARS[0:OFFSET]}" + "}"
+            "{\n" + "\n".join(output)
+            + f"\n{indent + INDENT_CHARS[0:OFFSET]}" + "}"
         )
 
     if isinstance(value, dict):

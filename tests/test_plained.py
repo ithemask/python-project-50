@@ -24,10 +24,10 @@ nested_expected2 = parse_txt(OUTPUT_NESTED_PATH2)
 
 
 @pytest.mark.parametrize("test_input, expected", [
-        (plain_diff1, plain_expected1),
-        (plain_diff2, plain_expected2),
-        (nested_diff1, nested_expected1),
-        (nested_diff2, nested_expected2),
-    ])
+    (plain_diff1, plain_expected1),
+    (plain_diff2, plain_expected2),
+    (nested_diff1, nested_expected1),
+    (nested_diff2, nested_expected2),
+])
 def test_plained(test_input, expected):
     assert plained(test_input) == expected

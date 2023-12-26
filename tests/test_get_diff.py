@@ -24,18 +24,18 @@ nested_expected2 = parse_json(OUTPUT_NESTED_PATH2)
 
 
 @pytest.mark.parametrize("test_inputs, expected", [
-        ((JSON_PLAIN_PATH1, JSON_PLAIN_PATH2), plain_expected1),
-        ((JSON_PLAIN_PATH2, JSON_PLAIN_PATH1), plain_expected2),
-        ((YAML_PLAIN_PATH1, YAML_PLAIN_PATH2), plain_expected1),
-        ((YAML_PLAIN_PATH2, YAML_PLAIN_PATH1), plain_expected2),
-        ((JSON_PLAIN_PATH1, YAML_PLAIN_PATH2), plain_expected1),
-        ((JSON_PLAIN_PATH2, YAML_PLAIN_PATH1), plain_expected2),
-        ((JSON_NESTED_PATH1, JSON_NESTED_PATH2), nested_expected1),
-        ((JSON_NESTED_PATH2, JSON_NESTED_PATH1), nested_expected2),
-        ((YAML_NESTED_PATH1, YAML_NESTED_PATH2), nested_expected1),
-        ((YAML_NESTED_PATH2, YAML_NESTED_PATH1), nested_expected2),
-        ((YAML_NESTED_PATH1, JSON_NESTED_PATH2), nested_expected1),
-        ((YAML_NESTED_PATH2, JSON_NESTED_PATH1), nested_expected2),
-    ])
+    ((JSON_PLAIN_PATH1, JSON_PLAIN_PATH2), plain_expected1),
+    ((JSON_PLAIN_PATH2, JSON_PLAIN_PATH1), plain_expected2),
+    ((YAML_PLAIN_PATH1, YAML_PLAIN_PATH2), plain_expected1),
+    ((YAML_PLAIN_PATH2, YAML_PLAIN_PATH1), plain_expected2),
+    ((JSON_PLAIN_PATH1, YAML_PLAIN_PATH2), plain_expected1),
+    ((JSON_PLAIN_PATH2, YAML_PLAIN_PATH1), plain_expected2),
+    ((JSON_NESTED_PATH1, JSON_NESTED_PATH2), nested_expected1),
+    ((JSON_NESTED_PATH2, JSON_NESTED_PATH1), nested_expected2),
+    ((YAML_NESTED_PATH1, YAML_NESTED_PATH2), nested_expected1),
+    ((YAML_NESTED_PATH2, YAML_NESTED_PATH1), nested_expected2),
+    ((YAML_NESTED_PATH1, JSON_NESTED_PATH2), nested_expected1),
+    ((YAML_NESTED_PATH2, JSON_NESTED_PATH1), nested_expected2),
+])
 def test_get_diff(test_inputs, expected):
     assert get_diff(*test_inputs) == expected

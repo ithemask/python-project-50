@@ -13,7 +13,7 @@ def generate_diff(file_path1, file_path2, output_format="stylish"):
         apply_format = jsoned
     else:
         raise ValueError(
-            f'Invalid output format "{output_format}". ' +
-            'Available formats are: "stylish", "plain", "json".'
+            f'Invalid output format "{output_format}". '
+            + 'Available formats are: "stylish", "plain", "json".'
         )
     return apply_format(get_diff(file_path1, file_path2))

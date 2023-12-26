@@ -16,11 +16,11 @@ expected3 = parse_txt(OUTPUT_PATH3)
 
 
 @pytest.mark.parametrize("test_inputs, expected", [
-        ((FILE_PATH1, FILE_PATH2), expected1),
-        ((FILE_PATH1, FILE_PATH2, "stylish"), expected1),
-        ((FILE_PATH1, FILE_PATH2, "plain"), expected2),
-        ((FILE_PATH1, FILE_PATH2, "json"), expected3),
-    ])
+    ((FILE_PATH1, FILE_PATH2), expected1),
+    ((FILE_PATH1, FILE_PATH2, "stylish"), expected1),
+    ((FILE_PATH1, FILE_PATH2, "plain"), expected2),
+    ((FILE_PATH1, FILE_PATH2, "json"), expected3),
+])
 def test_generate_diff(test_inputs, expected):
     assert generate_diff(*test_inputs) == expected
 
