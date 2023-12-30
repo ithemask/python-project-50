@@ -2,7 +2,7 @@
   {
     "key": "follow",
     "action": "ADDED",
-    "old value": "nonexistent",
+    "old value": "NONEXISTENT",
     "new value": false
   },
   {
@@ -14,7 +14,7 @@
   {
     "key": "proxy",
     "action": "ADDED",
-    "old value": "nonexistent",
+    "old value": "NONEXISTENT",
     "new value": "123.234.53.22"
   },
   {
@@ -27,6 +27,6 @@
     "key": "verbose",
     "action": "REMOVED",
     "old value": true,
-    "new value": "nonexistent"
+    "new value": "NONEXISTENT"
   }
 ]

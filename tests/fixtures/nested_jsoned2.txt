@@ -6,7 +6,7 @@
         "key": "follow",
         "action": "REMOVED",
         "old value": false,
-        "new value": "nonexistent"
+        "new value": "NONEXISTENT"
       },
       {
         "key": "setting1",
@@ -17,7 +17,7 @@
       {
         "key": "setting2",
         "action": "ADDED",
-        "old value": "nonexistent",
+        "old value": "NONEXISTENT",
         "new value": 200
       },
       {
@@ -30,7 +30,7 @@
         "key": "setting4",
         "action": "REMOVED",
         "old value": "blah blah",
-        "new value": "nonexistent"
+        "new value": "NONEXISTENT"
       },
       {
         "key": "setting5",
@@ -38,7 +38,7 @@
         "old value": {
           "key5": "value5"
         },
-        "new value": "nonexistent"
+        "new value": "NONEXISTENT"
       },
       {
         "key": "setting6",
@@ -64,7 +64,7 @@
             "key": "ops",
             "action": "REMOVED",
             "old value": "vops",
-            "new value": "nonexistent"
+            "new value": "NONEXISTENT"
           }
         ]
       }
@@ -98,7 +98,7 @@
   {
     "key": "group2",
     "action": "ADDED",
-    "old value": "nonexistent",
+    "old value": "NONEXISTENT",
     "new value": {
       "abc": 12345,
       "deep": {
@@ -117,6 +117,6 @@
       },
       "fee": 100500
     },
-    "new value": "nonexistent"
+    "new value": "NONEXISTENT"
   }
 ]
