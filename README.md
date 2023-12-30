@@ -108,7 +108,8 @@ _For more information see the "Usage examples" section below._
 ## Installation
 ```
 git clone git@github.com:ithemask/python-project-50.git
-python3 -m pip install --user dist/*.whl
+make build
+make package-install
 ```
 ## Usage examples
 #### Displaying the help message
