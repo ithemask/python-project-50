@@ -54,11 +54,13 @@ _For more information see the "Usage examples" section below._
         "nested": [
           {
             "key": "follow",
-            "old value": "nonexistent",
+            "action": "ADDED",
+            "old value": "NONEXISTENT",
             "new value": false
           },
           {
             "key": "setting1",
+            "action": "CHANGED",
             "old value": "Value 1",
             "new value": {
               "key5": "value5"
@@ -66,7 +68,8 @@ _For more information see the "Usage examples" section below._
           },
           {
             "key": "setting3",
-            "old value": "nonexistent",
+            "action": "ADDED",
+            "old value": "NONEXISTENT",
             "new value": {
               "key": "value",
               "doge": {
@@ -81,11 +84,13 @@ _For more information see the "Usage examples" section below._
         "nested": [
           {
             "key": "foo",
+            "action": "REMOVED",
             "old value": "bar",
-            "new value": "nonexistent"
+            "new value": "NONEXISTENT"
           },
           {
             "key": "nest",
+            "action": "CHANGED",
             "old value": {
               "key": "value"
             },
@@ -122,6 +127,6 @@ python3 -m pip install --user dist/*.whl
 [![asciicast](https://asciinema.org/a/lswyzmZLO04RRFVDOTzlK6nzo.svg)](https://asciinema.org/a/lswyzmZLO04RRFVDOTzlK6nzo)
 #### Choosing the alternative output format
 [![asciicast](https://asciinema.org/a/lqKv4iz8PbtDhS4sZBaxIPJmD.svg)](https://asciinema.org/a/lqKv4iz8PbtDhS4sZBaxIPJmD)
-[![asciicast](https://asciinema.org/a/CPbVCZHuWra8zD6JcvWhj7OYy.svg)](https://asciinema.org/a/CPbVCZHuWra8zD6JcvWhj7OYy)
+[![asciicast](https://asciinema.org/a/FSZjjqeubp8LqNjAVpm2jlFBR.svg)](https://asciinema.org/a/FSZjjqeubp8LqNjAVpm2jlFBR)
 #### Importing the ___generate_diff___ function
-[![asciicast](https://asciinema.org/a/Ga7AfPayXNEVMOXHaVtSIEWES.svg)](https://asciinema.org/a/Ga7AfPayXNEVMOXHaVtSIEWES)
+[![asciicast](https://asciinema.org/a/waytT5fwnip0Rhb8tGLD4b18D.svg)](https://asciinema.org/a/waytT5fwnip0Rhb8tGLD4b18D)
