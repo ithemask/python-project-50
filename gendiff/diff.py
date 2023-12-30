@@ -1,10 +1,10 @@
-DEFAULT_VALUE = 'nonexistent'
+DEFAULT_VALUE = 'NONEXISTENT'
 
 
-def get_action(old_value, new_value):
-    if old_value == DEFAULT_VALUE:
+def get_action(key_in_dict1, key_in_dict2, old_value, new_value):
+    if key_in_dict2 and not key_in_dict1:
         return 'ADDED'
-    if new_value == DEFAULT_VALUE:
+    if key_in_dict1 and not key_in_dict2:
         return 'REMOVED'
     if old_value != new_value:
         return 'CHANGED'
@@ -24,7 +24,12 @@ def get_diff(dict1, dict2):
         else:
             diff.append({
                 'key': key,
-                'action': get_action(old_value, new_value),
+                'action': get_action(
+                    key in dict1,
+                    key in dict2,
+                    old_value,
+                    new_value,
+                ),
                 'old value': old_value,
                 'new value': new_value,
             })
