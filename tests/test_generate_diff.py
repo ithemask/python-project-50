@@ -89,3 +89,5 @@ def test_generate_diff(test_inputs, expected):
 def test_generate_diff_fail():
     with pytest.raises(ValueError):
         generate_diff(JSON_PLAIN_PATH1, JSON_PLAIN_PATH2, 'nice')
+    with pytest.raises(TypeError):
+        generate_diff(JSON_PLAIN_PATH1, OUTPUT_PLAIN_STYLISHED_PATH1)
