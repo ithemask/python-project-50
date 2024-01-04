@@ -7,23 +7,23 @@ OFFSET = -2
 
 def get_stylish_view(key, value, special_char, depth, indent):
 
-    def walk(dict_, output, depth, indent):
+    def walk(dict_, output, depth):
         for key, value in dict_.items():
             beginning = f'{INDENT_CHARS * depth + key}: '
             if isinstance(value, dict):
                 output.append(
                     beginning
-                    + walk(value, [], depth + 1, indent + INDENT_CHARS)
+                    + walk(value, [], depth + 1)
                 )
             else:
                 output.append(beginning + format_(value))
         return (
             '{\n' + '\n'.join(output)
-            + f'\n{indent + INDENT_CHARS[0:OFFSET]}' + '}'
+            + f'\n{INDENT_CHARS * (depth - 1)}' + '}'
         )
 
     if isinstance(value, dict):
-        formatted = walk(value, [], depth + 1, indent)
+        formatted = walk(value, [], depth + 1)
     else:
         formatted = format_(value)
 
@@ -55,7 +55,7 @@ def get_stylished(diff):
             if nested:
                 output.append(indent + special_char + key + ': {')
                 walk(nested, output, depth + 1)
-                output.append(indent + INDENT_CHARS[0:OFFSET] + '}')
+                output.append(INDENT_CHARS * depth + '}')
             else:
                 action = entry['action']
                 old_value = entry['old value']
