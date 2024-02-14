@@ -3,7 +3,7 @@
     "key": "follow",
     "action": "REMOVED",
     "old value": false,
-    "new value": "NONEXISTENT"
+    "new value": null
   },
   {
     "key": "host",
@@ -15,7 +15,7 @@
     "key": "proxy",
     "action": "REMOVED",
     "old value": "123.234.53.22",
-    "new value": "NONEXISTENT"
+    "new value": null
   },
   {
     "key": "timeout",
@@ -26,7 +26,7 @@
   {
     "key": "verbose",
     "action": "ADDED",
-    "old value": "NONEXISTENT",
+    "old value": null,
     "new value": true
   }
 ]
