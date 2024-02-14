@@ -1,8 +1,13 @@
-from gendiff.formatters.value_formatter import format_
-
-
 INDENT_CHARS = '    '
 OFFSET = -2
+
+
+def format_(value):
+    if isinstance(value, bool):
+        return str(value).lower()
+    if value is None:
+        return 'null'
+    return str(value)
 
 
 def get_stylish_view(key, value, special_char, depth, indent):

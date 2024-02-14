@@ -1,17 +1,26 @@
-from gendiff.formatters.value_formatter import format_more
+def format_(value):
+    if isinstance(value, dict):
+        return '[complex value]'
+    if isinstance(value, bool):
+        return str(value).lower()
+    if isinstance(value, str):
+        return f"'{str(value)}'"
+    if value is None:
+        return 'null'
+    return str(value)
 
 
 def get_plain_view(path, action, old_value, new_value):
     beginning = f"Property '{path}' was "
     if action == 'ADDED':
-        return beginning + f'added with value: {format_more(new_value)}'
+        return beginning + f'added with value: {format_(new_value)}'
     if action == 'REMOVED':
         return beginning + 'removed'
     if action == 'CHANGED':
         return (
             beginning
             + 'updated. '
-            + f'From {format_more(old_value)} to {format_more(new_value)}'
+            + f'From {format_(old_value)} to {format_(new_value)}'
         )
 
 
