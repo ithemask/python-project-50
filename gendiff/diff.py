@@ -1,6 +1,3 @@
-DEFAULT_VALUE = 'NONEXISTENT'
-
-
 def get_action(key_in_dict1, key_in_dict2, old_value, new_value):
     if key_in_dict2 and not key_in_dict1:
         return 'ADDED'
@@ -16,8 +13,8 @@ def get_diff(dict1, dict2):
     keys = sorted(list(set(dict1) | set(dict2)))
 
     for key in keys:
-        old_value = dict1.get(key, DEFAULT_VALUE)
-        new_value = dict2.get(key, DEFAULT_VALUE)
+        old_value = dict1.get(key)
+        new_value = dict2.get(key)
 
         if isinstance(old_value, dict) and isinstance(new_value, dict):
             diff.append({'key': key, 'nested': get_diff(old_value, new_value)})
