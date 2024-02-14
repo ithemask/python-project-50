@@ -1,5 +1,5 @@
 from json import dumps
 
 
-def get_jsoned(diff):
+def jsonify(diff):
     return dumps(diff, indent=2)

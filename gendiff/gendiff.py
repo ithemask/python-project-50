@@ -1,8 +1,8 @@
 from gendiff.input_parser import parse_input
 from gendiff.diff import get_diff
-from gendiff.formatters.stylish import get_stylished
-from gendiff.formatters.plain import get_plained
-from gendiff.formatters.json_ import get_jsoned
+from gendiff.formatters.stylish import stylishify
+from gendiff.formatters.plain import plainify
+from gendiff.formatters.json_ import jsonify
 
 
 def generate_diff(file_path1, file_path2, output_format='stylish'):
@@ -10,11 +10,11 @@ def generate_diff(file_path1, file_path2, output_format='stylish'):
     config2 = parse_input(file_path2)
 
     if output_format == 'stylish':
-        apply_format = get_stylished
+        apply_format = stylishify
     elif output_format == 'plain':
-        apply_format = get_plained
+        apply_format = plainify
     elif output_format == 'json':
-        apply_format = get_jsoned
+        apply_format = jsonify
     else:
         raise ValueError(
             f'Invalid output format "{output_format}". '

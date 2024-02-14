@@ -24,7 +24,7 @@ def get_plain_view(path, action, old_value, new_value):
         )
 
 
-def get_plained(diff):
+def plainify(diff):
 
     def walk(diff, path, output):
         for entry in diff:
