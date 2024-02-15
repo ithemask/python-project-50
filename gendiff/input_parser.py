@@ -19,5 +19,5 @@ def parse_input(file_path):
     else:
         raise TypeError(
             f'Invalid file type {extension}. '
-            + 'Available types are: .json, .yml, .yaml.'
+            f'Available types are: .json, .yml, .yaml.'
         )

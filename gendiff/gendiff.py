@@ -18,7 +18,7 @@ def generate_diff(file_path1, file_path2, output_format='stylish'):
     else:
         raise ValueError(
             f'Invalid output format "{output_format}". '
-            + 'Available formats are: "stylish", "plain", "json".'
+            f'Available formats are: "stylish", "plain", "json".'
         )
 
     return apply_format(get_diff(config1, config2))

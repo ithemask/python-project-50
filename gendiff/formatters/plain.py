@@ -11,16 +11,15 @@ def format_(value):
 
 
 def get_plain_view(path, action, old_value, new_value):
-    beginning = f"Property '{path}' was "
+    beginning = f"Property '{path}' was"
     if action == 'ADDED':
-        return beginning + f'added with value: {format_(new_value)}'
+        return f'{beginning} added with value: {format_(new_value)}'
     if action == 'REMOVED':
-        return beginning + 'removed'
+        return f'{beginning} removed'
     if action == 'CHANGED':
         return (
-            beginning
-            + 'updated. '
-            + f'From {format_(old_value)} to {format_(new_value)}'
+            f'{beginning} updated. '
+            f'From {format_(old_value)} to {format_(new_value)}'
         )
 
 
