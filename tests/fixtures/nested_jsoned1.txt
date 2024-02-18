@@ -1,70 +1,70 @@
 [
   {
     "key": "common",
-    "nested": [
+    "action": "NESTED",
+    "value": [
       {
         "key": "follow",
         "action": "ADDED",
-        "old value": null,
-        "new value": false
+        "value": false
       },
       {
         "key": "setting1",
         "action": "UNCHANGED",
-        "old value": "Value 1",
-        "new value": "Value 1"
+        "value": "Value 1"
       },
       {
         "key": "setting2",
         "action": "REMOVED",
-        "old value": 200,
-        "new value": null
+        "value": 200
       },
       {
         "key": "setting3",
         "action": "CHANGED",
-        "old value": true,
-        "new value": null
+        "value": [
+          true,
+          null
+        ]
       },
       {
         "key": "setting4",
         "action": "ADDED",
-        "old value": null,
-        "new value": "blah blah"
+        "value": "blah blah"
       },
       {
         "key": "setting5",
         "action": "ADDED",
-        "old value": null,
-        "new value": {
+        "value": {
           "key5": "value5"
         }
       },
       {
         "key": "setting6",
-        "nested": [
+        "action": "NESTED",
+        "value": [
           {
             "key": "doge",
-            "nested": [
+            "action": "NESTED",
+            "value": [
               {
                 "key": "wow",
                 "action": "CHANGED",
-                "old value": "",
-                "new value": "so much"
+                "value": [
+                  "",
+                  "so much"
+                ]
               }
             ]
           },
           {
             "key": "key",
             "action": "UNCHANGED",
-            "old value": "value",
-            "new value": "value"
+            "value": "value"
           },
           {
             "key": "ops",
             "action": "ADDED",
-            "old value": null,
-            "new value": "vops"
+            "value": "vops"
           }
         ]
       }
@@ -72,45 +72,47 @@
   },
   {
     "key": "group1",
-    "nested": [
+    "action": "NESTED",
+    "value": [
       {
         "key": "baz",
         "action": "CHANGED",
-        "old value": "bas",
-        "new value": "bars"
+        "value": [
+          "bas",
+          "bars"
+        ]
       },
       {
         "key": "foo",
         "action": "UNCHANGED",
-        "old value": "bar",
-        "new value": "bar"
+        "value": "bar"
       },
       {
         "key": "nest",
         "action": "CHANGED",
-        "old value": {
-          "key": "value"
-        },
-        "new value": "str"
+        "value": [
+          {
+            "key": "value"
+          },
+          "str"
+        ]
       }
     ]
   },
   {
     "key": "group2",
     "action": "REMOVED",
-    "old value": {
+    "value": {
       "abc": 12345,
       "deep": {
         "id": 45
       }
-    },
-    "new value": null
+    }
   },
   {
     "key": "group3",
     "action": "ADDED",
-    "old value": null,
-    "new value": {
+    "value": {
       "deep": {
         "id": {
           "number": 45

@@ -2,31 +2,29 @@
   {
     "key": "follow",
     "action": "REMOVED",
-    "old value": false,
-    "new value": null
+    "value": false
   },
   {
     "key": "host",
     "action": "UNCHANGED",
-    "old value": "hexlet.io",
-    "new value": "hexlet.io"
+    "value": "hexlet.io"
   },
   {
     "key": "proxy",
     "action": "REMOVED",
-    "old value": "123.234.53.22",
-    "new value": null
+    "value": "123.234.53.22"
   },
   {
     "key": "timeout",
     "action": "CHANGED",
-    "old value": 50,
-    "new value": 20
+    "value": [
+      50,
+      20
+    ]
   },
   {
     "key": "verbose",
     "action": "ADDED",
-    "old value": null,
-    "new value": true
+    "value": true
   }
 ]
