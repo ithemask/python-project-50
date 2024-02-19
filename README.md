@@ -17,86 +17,97 @@ _For more information see the "Usage examples" section below._
     ```
     {
         common: {
-          + follow: false
-          - setting1: Value 1
-          + setting1: {
+            setting1: Value 1
+          - setting2: 200
+          + setting3: {
                 key5: value5
             }
-          + setting3: {
-                key: value
+            setting4: {
                 doge: {
-                    wow: so much
+                  - wow: 
+                  + wow: so much
                 }
+                key: value
+              + ops: vops
             }
         }
-        group1: {
-          - foo: bar
-          - nest: {
-                key: value
-            }
-          + nest: str
+      + group1: {
+            foo: bar
+            baz: bars
         }
     }
     ```
   + _"plain":_
     ```
-    Property 'common.follow' was added with value: false
-    Property 'common.setting1' was updated. From 'Value 1' to [complex value]
+    Property 'common.setting2' was removed
     Property 'common.setting3' was added with value: [complex value]
-    Property 'group1.foo' was removed
-    Property 'group1.nest' was updated. From [complex value] to 'str'
+    Property 'common.setting4.doge.wow' was updated. From '' to 'so much'
+    Property 'common.setting4.ops' was added with value: 'vops'
+    Property 'group1' was added with value: [complex value]
     ```
   + _"json":_
     ```
     [
       {
         "key": "common",
-        "nested": [
-          {
-            "key": "follow",
-            "action": "ADDED",
-            "old value": "NONEXISTENT",
-            "new value": false
-          },
+        "action": "NESTED",
+        "value": [
           {
             "key": "setting1",
-            "action": "CHANGED",
-            "old value": "Value 1",
-            "new value": {
-              "key5": "value5"
-            }
+            "action": "UNCHANGED",
+            "value": "Value 1"
+          },
+          {
+            "key": "setting2",
+            "action": "REMOVED",
+            "value": 200
           },
           {
             "key": "setting3",
             "action": "ADDED",
-            "old value": "NONEXISTENT",
-            "new value": {
-              "key": "value",
-              "doge": {
-                "wow": "so much"
-              }
+            "value": {
+              "key5": "value5"
             }
+          },
+          {
+            "key": "setting4",
+            "action": "NESTED",
+            "value": [
+              {
+                "key": "doge",
+                "action": "NESTED",
+                "value": [
+                  {
+                    "key": "wow",
+                    "action": "CHANGED",
+                    "value": [
+                      "",
+                      "so much"
+                    ]
+                  }
+                ]
+              },
+              {
+                "key": "key",
+                "action": "UNCHANGED",
+                "value": "value"
+              },
+              {
+                "key": "ops",
+                "action": "ADDED",
+                "value": "vops"
+              }
+            ]
           }
         ]
       },
       {
         "key": "group1",
-        "nested": [
-          {
-            "key": "foo",
-            "action": "REMOVED",
-            "old value": "bar",
-            "new value": "NONEXISTENT"
-          },
-          {
-            "key": "nest",
-            "action": "CHANGED",
-            "old value": {
-              "key": "value"
-            },
-            "new value": "str"
-          }
-        ]
+        "action": "ADDED",
+        "value": {
+          "foo": "bar",
+          "baz": "bars"
+        }
       }
     ]
     ```
@@ -128,6 +139,6 @@ make package-install
 [![asciicast](https://asciinema.org/a/lswyzmZLO04RRFVDOTzlK6nzo.svg)](https://asciinema.org/a/lswyzmZLO04RRFVDOTzlK6nzo)
 #### Choosing the alternative output format
 [![asciicast](https://asciinema.org/a/lqKv4iz8PbtDhS4sZBaxIPJmD.svg)](https://asciinema.org/a/lqKv4iz8PbtDhS4sZBaxIPJmD)
-[![asciicast](https://asciinema.org/a/FSZjjqeubp8LqNjAVpm2jlFBR.svg)](https://asciinema.org/a/FSZjjqeubp8LqNjAVpm2jlFBR)
+[![asciicast](https://asciinema.org/a/RNiVtfDofTBNge34yKe8NuBqn.svg)](https://asciinema.org/a/RNiVtfDofTBNge34yKe8NuBqn)
 #### Importing the ___generate_diff___ function
-[![asciicast](https://asciinema.org/a/waytT5fwnip0Rhb8tGLD4b18D.svg)](https://asciinema.org/a/waytT5fwnip0Rhb8tGLD4b18D)
+[![asciicast](https://asciinema.org/a/7difl4pWNoQXk9wrlf3t1xQsz.svg)](https://asciinema.org/a/7difl4pWNoQXk9wrlf3t1xQsz)
